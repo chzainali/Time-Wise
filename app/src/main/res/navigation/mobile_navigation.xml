@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.timewise.dashboard.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_createChunkFragment"
+            app:destination="@id/createChunkFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.timewise.dashboard.fragments.AllChunksFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_all_chunks" >
+
+        <action
+            android:id="@+id/action_navigation_dashboard_to_createChunkFragment"
+            app:destination="@id/createChunkFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.timewise.dashboard.fragments.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/createChunkFragment"
+        android:name="com.example.timewise.dashboard.fragments.CreateChunkFragment"
+        android:label="fragment_create_chunk"
+        tools:layout="@layout/fragment_create_chunk" >
+        <action
+            android:id="@+id/action_createChunkFragment_to_selectTimeFragment"
+            app:destination="@id/selectTimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTimeFragment"
+        android:name="com.example.timewise.dashboard.fragments.SelectTimeFragment"
+        android:label="fragment_select_time"
+        tools:layout="@layout/fragment_select_time" />
+</navigation>

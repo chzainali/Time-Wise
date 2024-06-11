@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/mainColor">
+    <TextView
+        android:id="@+id/textViewFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Do it From"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TimePicker
+        android:id="@+id/fromTimePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFrom"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:id="@+id/textViewTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fromTimePicker"
+        android:layout_centerHorizontal="true"
+        android:text="To"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TimePicker
+        android:id="@+id/toTimePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTo"
+        android:timePickerMode="spinner" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDone"
+        android:layout_below="@+id/toTimePicker"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_field"
+        android:backgroundTint="@color/themeColor"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="Done"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
+</RelativeLayout>
